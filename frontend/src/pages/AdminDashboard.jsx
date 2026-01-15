@@ -95,7 +95,7 @@ export default function AdminDashboard() {
     if (!name.trim() || !email.trim() || !password || !address.trim())
       return alert("Please fill all user fields before adding");
 
-    // basic email pattern check
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) return alert("Enter a valid email address");
 
@@ -155,12 +155,12 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
+       
         <h2 className="text-3xl font-semibold text-gray-800 mb-6">
           Admin Dashboard
         </h2>
 
-        {/* Stats Cards */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
             <p className="text-sm text-gray-500">Total Users</p>
@@ -176,7 +176,7 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* Logout */}
+      
         <div className="flex justify-end mb-6">
           <button
             onClick={handleLogout}
@@ -186,7 +186,7 @@ export default function AdminDashboard() {
           </button>
         </div>
 
-        {/* Change Password */}
+        
         <div className="bg-white rounded-lg shadow p-4 mb-8">
           <h3 className="text-lg font-medium mb-3">Change Password</h3>
           <div className="flex gap-3">
@@ -206,10 +206,10 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* Users Section */}
+       
         <h3 className="text-xl font-semibold mb-3">Users</h3>
 
-        {/* Filters */}
+        
         <div className="grid grid-cols-1 md:grid-cols-5 gap-3 mb-4">
           {["name", "email", "address", "role"].map((field) => (
             <input
@@ -230,7 +230,7 @@ export default function AdminDashboard() {
           </button>
         </div>
 
-        {/* User List */}
+        
         <div className="bg-white rounded-lg shadow divide-y mb-6">
           {users.map((u) => (
             <div
@@ -250,7 +250,7 @@ export default function AdminDashboard() {
           ))}
         </div>
 
-        {/* Selected User */}
+      
         {selectedUser && (
           <div className="bg-white rounded-lg shadow p-4 mb-8">
             <h4 className="font-semibold mb-2">User Details</h4>
@@ -264,7 +264,7 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        {/* Add User */}
+        
         <h3 className="text-xl font-semibold mb-3">Add User</h3>
         <div className="grid grid-cols-1 md:grid-cols-6 gap-3 mb-8">
           <input
@@ -310,7 +310,7 @@ export default function AdminDashboard() {
           </button>
         </div>
 
-        {/* Stores */}
+        
         <h3 className="text-xl font-semibold mb-3">Stores</h3>
 
         <div className="flex gap-3 mb-4">
@@ -339,7 +339,7 @@ export default function AdminDashboard() {
           ))}
         </div>
 
-        {/* Add Store */}
+        
         <h3 className="text-xl font-semibold mb-3">Add Store</h3>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
           <input

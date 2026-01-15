@@ -38,7 +38,7 @@ export default function OwnerDashboard() {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-3xl mx-auto">
-        {/* Header */}
+
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-gray-800">
             Store Owner Dashboard
@@ -51,13 +51,13 @@ export default function OwnerDashboard() {
           </button>
         </div>
 
-        {/* Average Rating */}
+       
         <div className="bg-white rounded-lg shadow p-4 mb-6">
           <p className="text-sm text-gray-500">Average Rating</p>
           <p className="text-2xl font-bold text-gray-800">{avg}</p>
         </div>
 
-        {/* Change Password */}
+        
         <div className="bg-white rounded-lg shadow p-4 mb-6">
           <h3 className="text-lg font-medium mb-3">Change Password</h3>
           <div className="flex gap-3">
@@ -77,7 +77,7 @@ export default function OwnerDashboard() {
           </div>
         </div>
 
-        {/* Users Who Rated */}
+      
         <h3 className="text-lg font-medium mb-3">Users Who Rated</h3>
 
         <div className="grid gap-3">

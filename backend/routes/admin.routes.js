@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 
 const router = express.Router();
 
-/* Admin Dashboard */
+
 router.get("/dashboard", verifyToken, allowRoles("ADMIN"), (req, res) => {
   const data = {};
 
@@ -23,7 +23,6 @@ router.get("/dashboard", verifyToken, allowRoles("ADMIN"), (req, res) => {
   });
 });
 
-/* View all users with optional filters */
 router.get("/users", verifyToken, allowRoles("ADMIN"), (req, res) => {
   const { name, email, address, role } = req.query;
   let query = "SELECT id,name,email,address,role FROM users";
@@ -51,7 +50,6 @@ router.get("/users", verifyToken, allowRoles("ADMIN"), (req, res) => {
   });
 });
 
-/* View single user details (include owner rating if applicable) */
 router.get("/users/:id", verifyToken, allowRoles("ADMIN"), (req, res) => {
   const userId = req.params.id;
   db.query(
@@ -63,17 +61,16 @@ router.get("/users/:id", verifyToken, allowRoles("ADMIN"), (req, res) => {
   );
 });
 
-/* Add user (admin only) */
 router.post("/users", verifyToken, allowRoles("ADMIN"), async (req, res) => {
   const { name, email, password, address, role } = req.body;
-  // Basic validation
+  
   if (!name || !email || !password || !address) {
     return res
       .status(400)
       .json("All fields (name, email, password, address) are required");
   }
 
-  // Check for duplicate email
+  
   db.query(
     "SELECT id FROM users WHERE email = ?",
     [email],
@@ -95,7 +92,7 @@ router.post("/users", verifyToken, allowRoles("ADMIN"), async (req, res) => {
   );
 });
 
-/* View stores (admin) */
+
 router.get("/stores", verifyToken, allowRoles("ADMIN"), (req, res) => {
   db.query(
     `SELECT s.*, u.name as ownerName, u.email as ownerEmail, AVG(r.rating) as avgRating
@@ -107,7 +104,7 @@ router.get("/stores", verifyToken, allowRoles("ADMIN"), (req, res) => {
   );
 });
 
-/* Add store */
+
 router.post("/stores", verifyToken, allowRoles("ADMIN"), (req, res) => {
   const { name, email, address, owner_id } = req.body;
   if (!name || !email || !address || !owner_id)

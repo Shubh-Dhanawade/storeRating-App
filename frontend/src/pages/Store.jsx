@@ -61,10 +61,10 @@ export default function Stores() {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
+        
         <h2 className="text-3xl font-semibold text-gray-800 mb-6">Stores</h2>
 
-        {/* Filters + Actions */}
+        
         <div className="flex flex-wrap gap-3 mb-6">
           <input
             type="text"
@@ -97,7 +97,7 @@ export default function Stores() {
           </button>
         </div>
 
-        {/* Change Password */}
+        
         <div className="bg-white rounded-lg shadow p-4 mb-8">
           <h4 className="font-medium mb-3 text-gray-800">Change Password</h4>
           <div className="flex gap-3">
@@ -117,12 +117,11 @@ export default function Stores() {
           </div>
         </div>
 
-        {/* Store List */}
         <div className="space-y-4">
           {filteredStores.map((store) => (
             <div key={store.id} className="bg-white rounded-lg shadow p-4">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-                {/* Store Info */}
+                
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800">
                     {store.name}
@@ -142,7 +141,7 @@ export default function Stores() {
                   </p>
                 </div>
 
-                {/* Rating Action */}
+              
                 <div className="flex items-center gap-3">
                   <input
                     type="number"
