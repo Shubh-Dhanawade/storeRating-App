@@ -109,13 +109,13 @@ The platform supports **role-based authentication** with **Admin, Normal User, a
 
 ### 🏬 Store Listing & Rating (User Dashboard)
 
-## 1
-
-![Store List](screenshots/userdashboard.png)
-
-## 2
+## 1 Dashboard
 
 ![Store List](screenshots/userdashboard2.png)
+
+## 2 Filtering data
+
+![Store List](screenshots/userdashboard.png)
 
 ### 🏬 Store Rating (Owner Dashboard)
 
