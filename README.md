@@ -8,6 +8,7 @@ The platform supports **role-based authentication** with **Admin, Normal User, a
 ## 🚀 Features
 
 ### 👤 Authentication & Authorization
+
 - Single login system for all users
 - Role-based access control
 - Secure password handling
@@ -18,6 +19,7 @@ The platform supports **role-based authentication** with **Admin, Normal User, a
 ### 🛠 User Roles & Functionalities
 
 #### 🔑 System Administrator
+
 - Add new stores, users, and admin accounts
 - View dashboard statistics:
   - Total users
@@ -31,6 +33,7 @@ The platform supports **role-based authentication** with **Admin, Normal User, a
 ---
 
 #### 🙋 Normal User
+
 - Register and login
 - Update password
 - View all registered stores
@@ -43,6 +46,7 @@ The platform supports **role-based authentication** with **Admin, Normal User, a
 ---
 
 #### 🏪 Store Owner
+
 - Login and update password
 - View users who rated their store
 - View average rating of their store
@@ -50,12 +54,13 @@ The platform supports **role-based authentication** with **Admin, Normal User, a
 ---
 
 ## 🧪 Validations Implemented
+
 - **Name:** 20–60 characters
 - **Address:** Max 400 characters
 - **Email:** Standard email validation
-- **Password:**  
-  - 8–16 characters  
-  - At least one uppercase letter  
+- **Password:**
+  - 8–16 characters
+  - At least one uppercase letter
   - At least one special character
 
 ---
@@ -63,18 +68,21 @@ The platform supports **role-based authentication** with **Admin, Normal User, a
 ## 🧰 Tech Stack
 
 ### Frontend
+
 - React.js
 - React Router
 - Axios
 - CSS / Bootstrap
 
 ### Backend
+
 - Node.js
 - Express.js
 - JWT Authentication
 - bcrypt.js
 
 ### Database
+
 - MySQL (mysql2)
 
 ---
@@ -82,22 +90,63 @@ The platform supports **role-based authentication** with **Admin, Normal User, a
 ## 📸 Screenshots
 
 ### 🔐 Login Page
+
 ![Login](screenshots/login.png)
 
 ### 📝 Register Page
+
 ![Register](screenshots/register.png)
 
 ### 🧑‍💼 Admin Dashboard
-![Admin Dashboard](screenshots/admin-dashboard.png)
 
-### 🏬 Store Listing & Rating
-![Store List](screenshots/store-list.png)
+## 1
+
+![Admin Dashboard](screenshots/admindashboard.png)
+
+## 2
+
+![Admin Dashboard](screenshots/admindashboard2.png)
+
+### 🏬 Store Listing & Rating (User Dashboard)
+
+## 1
+
+![Store List](screenshots/userdashboard.png)
+
+## 2
+
+![Store List](screenshots/userdashboard2.png)
+
+### 🏬 Store Rating (Owner Dashboard)
+
+![Store List](screenshots/storeowner.png)
 
 ---
 
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone Repository
+
 ```bash
 git clone https://github.com/your-username/store-rating-app.git
 cd store-rating-app
+
+```
+
+### Front-end
+
+```bash
+cd frontend
+npm install
+npm run dev
+
+```
+
+### Back-end
+
+```bash
+cd backend
+npm install
+node server.js
+
+```
